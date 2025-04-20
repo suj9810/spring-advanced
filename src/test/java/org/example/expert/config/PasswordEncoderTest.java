@@ -14,7 +14,7 @@ class PasswordEncoderTest {
     private PasswordEncoder passwordEncoder;
 
     @Test
-    void matches_메서드가_정상적으로_동작한다() {
+    void returnsTrueWhenPasswordMatches() {
         // given
         String rawPassword = "testPassword";
         String encodedPassword = passwordEncoder.encode(rawPassword);
