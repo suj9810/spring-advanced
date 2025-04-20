@@ -19,8 +19,10 @@ class PasswordEncoderTest {
         String rawPassword = "testPassword";
         String encodedPassword = passwordEncoder.encode(rawPassword);
 
+        System.out.println("encodedPassword : " + encodedPassword);
         // when
-        boolean matches = passwordEncoder.matches(encodedPassword, rawPassword);
+        boolean matches = passwordEncoder.matches(rawPassword, encodedPassword);
+        System.out.println("matches : " + matches);
 
         // then
         assertTrue(matches);
